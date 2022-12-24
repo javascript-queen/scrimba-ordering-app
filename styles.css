@@ -1,0 +1,272 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 400px;
+  margin: 30px auto;
+  padding-bottom: 30px;
+  font-family: 'Londrina Solid', cursive;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+/* Header styles */
+
+header {
+  background-image: url('./img/bg.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 50px;
+  padding-bottom: 40px;
+  padding-left: 40px;
+  display: flex;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+}
+
+header h1 {
+  margin-top: 40px;
+  font-weight: 400;
+  font-size: 1.7rem;
+  color: #784331;
+}
+
+header h3 {
+  font-weight: 300;
+  font-size: 0.8rem;
+  color: #895f94;
+
+}
+
+.header-bubble__tea {
+  width: 140px;
+  height: 120px;
+}
+
+/* Items styles */
+
+.menu {
+  display: flex;
+  align-items: center;
+  padding-right: 25px;
+}
+
+h2 {
+  color: #895f94;
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+.menu p {
+  color: #784331;
+  font-size: 1rem;
+  font-weight: 100;
+  width: 80%;
+}
+
+.item-info {
+  margin-top: 20px;
+}
+
+.item-icon {
+  width: 140px;
+  height: 120px;
+}
+
+/* Add Button style */
+
+.pay-button,
+.order-button,
+.close-button,
+.add-button {
+  align-items: center;
+  background-color: #f0eadb;
+  border: 2px solid #784331;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #784331;
+  cursor: pointer;
+  display: flex;
+  font-family: Inter,sans-serif;
+  font-size: 16px;
+  height: 48px;
+  justify-content: center;
+  line-height: 24px;
+  max-width: 100%;
+  padding: 0 20px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.pay-button:after,
+.order-button:after,
+.close-button:after,
+.add-button:after {
+  background-color: #111;
+  border-radius: 8px;
+  content: "";
+  display: block;
+  height: 48px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(8px, 8px);
+  transition: transform .2s ease-out;
+  z-index: -1;
+}
+
+.pay-button:hover::after,
+.order-button:hover:after,
+.close-button:hover:after,
+.add-button:hover:after {
+  transform: translate(0, 0);
+}
+
+.pay-button:active,
+.order-button:active,
+.close-button:active,
+.add-button:active {
+  background-color: #bf9ac8;
+  outline: 0;
+}
+
+.pay-button:hover,
+.order-button:hover,
+.close-button:hover,
+.add-button:hover {
+  outline: 0;
+}
+
+@media (min-width: 768px) {
+  .pay-button,
+  .order-button,
+  .close-button,
+  .add-button {
+    padding: 0 40px;
+  }
+}
+
+/* Order styles */
+#total,
+#order {
+  margin-top: 30px;
+  padding-left: 30px;
+  padding-right: 20px;
+}
+
+.order-item {
+  padding-left: 30px;
+  padding-right: 20px;
+}
+
+#total, #order h2 {
+  text-align: center;
+}
+
+#order .add-button {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#remove {
+  padding-right: 160px;
+  color: #895f94;
+  cursor: pointer;
+}
+
+#remove:hover {
+  font-weight: 300;
+}
+
+#total p, 
+.order-item p {
+  color: #784331;
+  font-size: 1rem;
+  font-weight: 100;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.order-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.order-button {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Form style */
+
+.payment-form{
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 400px;
+  width: 50%;
+  padding: 20px 30px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 20px 2px rgb(163, 154, 154);
+  background-color: #f9f8f4;
+  filter: drop-shadow(5px 5px 255px rgba(0, 0, 0, 0.5));
+}
+
+.pay-button,
+.close-button {
+  margin: 10px auto 20px auto;
+}
+
+.payment {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center; 
+  gap: 20px;
+}
+
+.payment-form h2 {
+  margin-bottom: 10px;
+}
+
+#name,
+#card-number,
+#cvv{
+  width: 200px;
+  height: 40px;
+  padding-left: 10px;
+}
+
+.order-confirm-box{
+  display: flex;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.order-confirm{
+  margin: 0 auto;
+  text-align: center;
+  color: #895f94;
+  font-weight: 400;
+  font-size: 1.5rem;
+  width: 80%;
+}
