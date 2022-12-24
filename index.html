@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400&display=swap" rel="stylesheet">
+  <title>Bubble Tea Store</title>
+</head>
+<body>
+  <header>
+    <div class="title">
+      <h1>Bubbly Bubble Tea</h1>
+      <h3>Enjoy Chinese nostalgia in your town, kid.</h3>
+    </div>
+    <img class="header-bubble__tea"src="/img/yam.svg" alt="bubble tea icon">
+  </header>
+
+  <div id="menu-items"></div>
+
+  <div id="order-checkout"></div>
+
+  <div class="hidden payment-form" id="payment-form">
+    <button class="close-button" id="close-button" data-close="close">X</button>
+    <form class="payment">
+      <h2>Enter card details</h2>
+      <input type="text" placeholder="Enter your name" id="name" required>
+      <input type="number" placeholder="Enter card number" id="card-number" required>
+      <input type="number" placeholder="Enter CVV" id="cvv" required>
+      <button class="pay-button" type="submit" data-pay="pay">Pay</button>
+    </form>
+  </div>
+
+
+<script src="index.js" type="module"></script>
+</body>
+</html>
