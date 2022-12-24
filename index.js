@@ -10,7 +10,7 @@ function getFeedHtml() {
   menuArray.forEach((item) => {
     feedHtml += `
     <div  class="menu">
-      <img class="item-icon" src=${item.image}>
+      <img class="item-icon" src="${item.image}">
       <div class="item-info">
         <h2 class="item-title">${item.name}</h2>
         <p class="item-ingredients">${item.ingredients.join(', ')}</p>
