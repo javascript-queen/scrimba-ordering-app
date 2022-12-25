@@ -14,7 +14,7 @@ body {
 /* Header styles */
 
 header {
-  background-image: url('/img/bg.svg');
+  background-image: url('img/bg.svg');
   background-size: cover;
   background-repeat: no-repeat;
   padding-top: 50px;
